@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "api-crud-fastapi"
+version = "0.1.0"
+description = ""
+authors = ["dslucasribeiro <dslucasribeiro@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+taskipy = "^1.12.2"
+pytest = "^8.0.1"
+httpx = "^0.26.0"
+fastapi = "^0.109.2"
+uvicorn = "^0.27.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+run = "uvicorn src.main:app --reload"
+test = "pytest tests\test.py -v"
+kill = "kill -9 $(lsof -t -i:8000)"
