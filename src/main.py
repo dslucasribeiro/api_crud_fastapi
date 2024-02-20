@@ -45,4 +45,13 @@ def listar_produtos():
     """
     return produtos
 
+@app.get("/produtos/{produto_id}")
+def listar_produto(produto_id: int):
+    """
+    View que retorna um produto específico
+    """
+    for produto in produtos:
+        if produto["id"] == produto_id:
+            return produto
+    return {"Status": 404,"Mensagem": "Produto não encontrado"}
 
