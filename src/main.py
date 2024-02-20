@@ -44,3 +44,5 @@ def listar_produtos():
     View que que retorna o dicionário de produtos
     """
     return produtos
+
+
