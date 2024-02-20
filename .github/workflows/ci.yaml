@@ -20,4 +20,4 @@ jobs:
         run: poetry install
 
       - name: rodar minha rotina de testes
-        run: pytest tests\test.py -v
+        run: poetry run pytest tests\test.py -v
