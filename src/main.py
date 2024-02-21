@@ -54,8 +54,3 @@ def listar_produto(produto_id: int):
         if produto["id"] == produto_id:
             return produto
     return {"Status": 404,"Mensagem": "Produto não encontrado"}
-
-
-
-
-
