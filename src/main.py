@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from typing import List, Dict, Any
+from schema import ProdutoSchema
 
 app = FastAPI()
 
