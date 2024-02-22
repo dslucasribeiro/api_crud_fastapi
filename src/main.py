@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from typing import List, Dict, Any
+from schema import ProdutoSchema
 
 app = FastAPI()
 
@@ -54,4 +55,3 @@ def listar_produto(produto_id: int):
         if produto["id"] == produto_id:
             return produto
     return {"Status": 404,"Mensagem": "Produto não encontrado"}
-
