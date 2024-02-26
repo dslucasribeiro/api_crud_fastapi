@@ -8,6 +8,9 @@ from .model import Produto
 
 router = APIRouter()
 
+@router.get("/")
+def read_root():
+    return {"Hello": "World"}
 
 @router.get("/produtos", response_model=List[ProdutoSchema])
 async def listar_produtos(db: Session = Depends(get_db)):
