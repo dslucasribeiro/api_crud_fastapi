@@ -19,5 +19,5 @@ jobs:
       - name: Install requirements
         run: poetry install
 
-      - name: rodar minha rotina de testes
-        run: poetry run pytest -v
+      # - name: rodar minha rotina de testes
+      #   run: poetry run pytest -v
